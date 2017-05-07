@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DDBB7B9F-9F51-DD2D-68B2-1541370D457D" name="Rachunki">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-03 16:45:13 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<engineerTo>
+<item key="F737E702-C62C-53E5-B668-D8C1B32E0052" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="IDRachunku" id="2EA94637-0759-7DF9-B0D1-0FC8DDEFC118">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-03 16:45:26 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<engineerTo>
+<item key="F737E702-C62C-53E5-B668-D8C1B32E0052" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DataZakupu" id="526A191E-AFFC-EBD4-4506-EB4913DC9D3A">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-03 16:45:48 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<engineerTo>
+<item key="F737E702-C62C-53E5-B668-D8C1B32E0052" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IDKlienta" id="114DEC5B-3095-37DB-AD47-3983D8B5CC7E">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-03 16:48:45 UTC</createdTime>
+<generatorID>ECF4648F-F11E-AF45-EF4C-2E92D242B8D9</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<engineerTo>
+<item key="F737E702-C62C-53E5-B668-D8C1B32E0052" value="true"/>
+</engineerTo>
+<referedAttribute>D817B424-F82E-A4FA-18ED-3804998B6EE5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IDPracownika" id="FE59B168-A705-6A50-2340-0EE44FCC8A73">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-03 22:16:41 UTC</createdTime>
+<generatorID>5FC6CF82-2632-E30D-9A17-593B8BDA875F</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<engineerTo>
+<item key="F737E702-C62C-53E5-B668-D8C1B32E0052" value="true"/>
+</engineerTo>
+<referedAttribute>96FD236C-B471-576F-8664-80DC04DCFD65</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CzyTransport" id="19DAA91C-29E6-6259-EFA9-337866C70A91">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:43:29 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<engineerTo>
+<item key="F737E702-C62C-53E5-B668-D8C1B32E0052" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CenaCalkowita" id="BC8A97C3-A802-DF27-6E6C-28CD6E8292CA">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-29 22:25:48 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<engineerTo>
+<item key="F737E702-C62C-53E5-B668-D8C1B32E0052" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1A2C5C7A-8208-6422-CE08-6E2AAA80A8BA" name="Rachunki PK">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-03 16:45:46 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="F737E702-C62C-53E5-B668-D8C1B32E0052" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2EA94637-0759-7DF9-B0D1-0FC8DDEFC118</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

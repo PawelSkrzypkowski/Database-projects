@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B74EB400-7CFF-04DF-E6B4-307A0E49C546" name="Produkty">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>581F864B-5345-FCEE-238B-F8E6084A0C58</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDProduktu" id="1432429B-29F8-19A9-8307-4EF548AB951C">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>9B0B544D-9C2F-733D-20C3-459597273051</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nazwa" id="EC3BCEBC-EA6F-86CB-BAD1-82C0C0E44634">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>CB294469-CEC1-DA95-6D64-543043207BB6</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cena" id="FCA89DA6-C21D-FC45-F4F6-A2358D57E769">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>2ACFC006-B011-6F39-F170-374A2EF36119</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CenaHurtowa" id="6B7D81DB-3682-F91E-64AF-B76FA4A202F6">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-02-05 10:50:45 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IDKategorii" id="0F7EB8E4-2A85-5128-7430-9461CD13045A">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>007F326A-E200-F3AB-AA4A-BA634D53A205</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FD1B9A64-94EF-45A8-DBFF-C0E30F59F906" referredColumn="4934A95A-CBBB-3C99-F5A0-4864FE8D0B2B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C082B1BE-618A-FC79-07B4-9B6755FCC90B" name="Produkty_PK">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>B12CA998-42F7-7FA6-9819-7DBD8167B4AD</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1432429B-29F8-19A9-8307-4EF548AB951C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="12641597-8A4D-FF22-0888-76EBDBCA20D7" name="Produkty_Kategorie_FK">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>9275EE87-E831-6A58-D091-9E4E0788B333</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0F7EB8E4-2A85-5128-7430-9461CD13045A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

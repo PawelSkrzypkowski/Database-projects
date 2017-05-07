@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="29A23F18-28D5-22A2-6E1F-4C623AFCDA52" name="Transport">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>BFC3C529-10D2-6086-A27C-5BFEFBE8E444</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDTransport" id="C238DB51-A806-0739-6464-2E61D6AC4B1F">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>48DA5200-6266-B5C8-F4E2-B6A3517A3B1E</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cena" id="9A375BE1-41EF-5CFA-D892-951A71F43353">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>9EEC9C24-11F7-19BC-F99E-81D8C609C103</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Adres" id="A2344157-56EA-3FD0-8EC7-E90D3A722E77">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>2329AF05-E1DC-2316-89D8-BDCACF59D829</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DataDostawy" id="8606BF4A-4650-2437-FC48-851DB573A923">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>33C255A5-C433-090D-35C0-7D423DE38894</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IDRachunku" id="BC172193-5991-5879-7699-6AFA0DB66C7D">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>C4A9C390-61C6-593B-FD71-2797271D4392</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0F18A611-7880-3FA8-2B6B-A277B373B3A6" referredColumn="BE1148DE-0A30-6000-006C-1E62F4266FD4"/>
+</associations>
+</Column>
+<Column name="IDPracownika" id="F8B52C0B-96AE-E831-9932-ACE311FC7354">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>FF151203-A7D7-730C-2561-BE91CBC50973</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3A8AB17E-3F83-FC99-C744-DBC6443F3926" referredColumn="4A660EDD-9B3D-2358-F86E-CAE22E16D521"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C3CAFBC8-E75B-FC68-94DC-45F654E2813A" name="Transport_PK">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>D18A8368-C044-CA6D-1BF3-23F9A9FC316F</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C238DB51-A806-0739-6464-2E61D6AC4B1F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="861695E4-A6EE-E212-590C-B8E375D28028" name="Transport_Rachunki_FK">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>59BB6DEF-7312-D730-7F8D-C951D1A0B162</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BC172193-5991-5879-7699-6AFA0DB66C7D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7A8F488C-AA29-6028-9953-048641A6B0F2" name="Transport_Pracownicy_FK">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>AD2B5DAE-04EB-C6E1-D683-AFEDCCA906FC</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F8B52C0B-96AE-E831-9932-ACE311FC7354"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

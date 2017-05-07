@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FC29748F-7FAA-BC59-3BD1-9E270AB89B00" name="Pracownicy">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>168CBF35-7219-C7A6-5421-19C7C3E6B9D5</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDPracownika" id="4A660EDD-9B3D-2358-F86E-CAE22E16D521">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>96FD236C-B471-576F-8664-80DC04DCFD65</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Imie" id="7E7AE488-3EFF-937E-374F-71F6221135F6">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>6008B230-FBD0-CDFF-2167-627DBE6C6F67</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nazwisko" id="F6121B33-9A8F-17C5-5EEF-F40AF9009776">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>0F643D4B-4A67-5632-1754-C2B7A414BC5C</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RokUrodzenia" id="D30CB920-89AD-41A7-BB85-4E91C51A632F">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>9CB51E45-5032-91DE-8926-023A1A9B24EB</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DataZatrudnienia" id="23DB0E89-8B25-71FA-F1F0-1BD949A631DD">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>14325307-2F37-06BA-C659-38C94AD6C080</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IDStanowiska" id="29344510-0E7F-7562-DABB-7CD5B84F8050">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>D4FD2215-7ADA-BD9C-16A0-6463CC635A9B</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D0D0AFAD-4085-60CA-4683-4F00A4443B82" referredColumn="11E28B65-2C51-84E4-834E-0C2EFB91C2B6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8843F865-9923-73CA-67C5-AFE5313F9EAA" name="Pracownicy_PK">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>A4FD5E28-540D-2B91-5081-6BEC98B3A32C</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4A660EDD-9B3D-2358-F86E-CAE22E16D521"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4AFA6D6A-B8D5-767D-A71E-6D6E9EC57887" name="Pracownicy_Stanowiska_FK">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>611E5343-9A99-56C5-03DD-FCE5C990EABB</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="29344510-0E7F-7562-DABB-7CD5B84F8050"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

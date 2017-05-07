@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Analiza biznesowa firmy" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dd807a89-fcb9-43dc-9b5c-17eb7c2be995">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from analiza_biznesowa_firmy]]>
+	</queryString>
+	<field name="Roczny zysk" class="java.math.BigDecimal"/>
+	<field name="Roczne wydatki na pensje" class="java.math.BigDecimal"/>
+	<field name="Roczne wydatki na sklep" class="java.math.BigDecimal"/>
+	<field name="Roczny zysk z kosztami" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="465" y="10" width="100" height="20" uuid="d347cb0b-5b7c-4828-b00b-e11215228cca"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="10" width="309" height="69" forecolor="#006600" uuid="23a6dcd3-9737-4abc-9431-f4210458fe67"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Analiza biznesowa firmy]]></text>
+			</staticText>
+			<image>
+				<reportElement x="319" y="7" width="93" height="72" uuid="92ebb5d4-9276-4a88-b264-7f19532e7791"/>
+				<imageExpression><![CDATA["G:\\BD\\projekt\\projekt\\raporty\\log.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="17" width="100" height="44" uuid="941922f2-d95a-4546-9aab-5b6b0efb4d38"/>
+				<textElement verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Roczny zysk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="161" y="17" width="113" height="44" uuid="2ebf73b1-6dc2-409d-9237-ccabbf9ccf64"/>
+				<textElement verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Roczne wydatki na pensje]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="319" y="17" width="116" height="41" uuid="0dae2d42-50cc-43eb-a67f-ca9bad9008ba"/>
+				<textElement verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Roczne wydatki na sklep]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="17" width="100" height="41" forecolor="#339900" uuid="38ceb330-0f66-4710-acc1-e8fc4317cbbd"/>
+				<textElement verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Roczny zysk z kosztami]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="20" backcolor="#3366FF" uuid="cbab2de0-e38f-4496-bada-68b17191575e">
+					<printWhenExpression><![CDATA[$V{REPORT_COUNT}.intValue()%2 == 0]]></printWhenExpression>
+				</reportElement>
+				<textFieldExpression><![CDATA[" "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="3b1fa2ad-fabb-48db-a814-d6454e82e670"/>
+				<textFieldExpression><![CDATA[$F{Roczny zysk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="161" y="0" width="100" height="20" uuid="e87c4c15-9d4c-4652-bea4-9ecdf85320c4"/>
+				<textFieldExpression><![CDATA[$F{Roczne wydatki na pensje}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="319" y="0" width="100" height="20" uuid="995121d7-4e76-4527-ad28-7aed54e9d350"/>
+				<textFieldExpression><![CDATA[$F{Roczne wydatki na sklep}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" forecolor="#339900" uuid="bce5e03b-25f9-4766-b920-318fffab144c"/>
+				<textFieldExpression><![CDATA[$F{Roczny zysk z kosztami}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="34" width="40" height="20" uuid="07342865-77fa-4be8-9762-be8dae4d09e5"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="34" width="80" height="20" uuid="edec2716-a1f3-4873-a177-8563bfbc71fb"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Strona "+$V{PAGE_NUMBER}+" z"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E866C377-5630-486A-45A8-424785DC873A" containerWithKeyObject="1B2A63EA-2B5E-14EB-2D60-7B5ABBE8FA20" localFKIndex="BD4CC302-565E-301A-E24B-4503C2F89908" name="Rachunek_poz_Rachunki_FK">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>DFADD328-0171-EB9B-BB24-5C826CAEE99B</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<referredTableLongName>Rachunki</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>CCA30A36-A494-9E35-3806-C127AE16DC34</referredTableID>
+<keyObject>BB06A365-3F02-AF15-2F20-CE3E46DBA291</keyObject>
+<referredKeyID>BB06A365-3F02-AF15-2F20-CE3E46DBA291</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>IDRachunku</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

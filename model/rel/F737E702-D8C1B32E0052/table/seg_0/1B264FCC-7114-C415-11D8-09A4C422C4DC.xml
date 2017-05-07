@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1B264FCC-7114-C415-11D8-09A4C422C4DC" name="Klienci">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>8D820158-EBC6-E27B-1E36-65143825B976</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDKlienta" id="401FD0A4-3B38-6501-CC65-DFFAFF363E98">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>D817B424-F82E-A4FA-18ED-3804998B6EE5</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Imie" id="766DD9CB-7FAF-A119-B9E1-25DF34BA8936">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>35E42255-F70D-AFBF-62A8-AA9D5AF5AC58</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nazwisko" id="0C3FCF2E-7F69-B701-8AD3-199DC49C5A68">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>3B91BE00-8188-9803-5F9B-A99B184E85FE</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Adres" id="8E00F016-5EC8-4AB0-A3EF-FDA4046D1A73">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>9A71A720-3536-04DE-6E57-A27A272B3453</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RokUrodzenia" id="979BC820-5F1E-E61B-B0C3-D60DA176933A">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>15A44FED-646B-32A8-3CBB-F9B7E7B93A91</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Plec" id="D7C2B7C1-AAC7-F03C-57B0-64ED2C9FDF1C">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>2CE11E67-E5EF-B357-EA2D-1737348A2CB8</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E9947EB9-BA78-2A1C-F06E-55FA73C5629C" name="Klienci_PK">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:20 UTC</createdTime>
+<generatorID>E0AF0153-8EE6-DB02-E37E-FC1C51FEFD71</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="401FD0A4-3B38-6501-CC65-DFFAFF363E98"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

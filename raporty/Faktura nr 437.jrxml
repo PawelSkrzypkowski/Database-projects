@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Faktura nr 437" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d421d99d-5bf1-4f29-aa05-9bc0904e96f5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="cb314ffd-a18e-4152-b24c-066012cfff14"/>
+	<queryString>
+		<![CDATA[select * from FAKTURA where IDRACHUNKU=440]]>
+	</queryString>
+	<field name="IDRACHUNKU" class="java.math.BigDecimal"/>
+	<field name="Imie klienta" class="java.lang.String"/>
+	<field name="Nazwisko klienta" class="java.lang.String"/>
+	<field name="Adres klienta" class="java.lang.String"/>
+	<field name="Imie pracownika" class="java.lang.String"/>
+	<field name="Nazwisko pracownika" class="java.lang.String"/>
+	<field name="Data zakupu" class="java.sql.Timestamp"/>
+	<field name="Cena calkowita" class="java.math.BigDecimal"/>
+	<field name="Ilosc" class="java.math.BigDecimal"/>
+	<field name="Cena pozycji" class="java.math.BigDecimal"/>
+	<field name="Nazwa produktu" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="69" splitType="Stretch">
+			<textField>
+				<reportElement x="197" y="0" width="184" height="28" uuid="69b8a765-71ba-4990-8dda-231243f5b625"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Rachunek nr " + $F{IDRACHUNKU}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="395" y="47" width="135" height="20" uuid="b88af24c-ed27-4501-b42a-f8aa675860bb"/>
+				<textFieldExpression><![CDATA["Data wystawienia: " + $F{Data zakupu}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="131" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="60" uuid="666170ee-1db0-43d7-a220-454a7e4fd3ce"/>
+				<text><![CDATA[Firma sprzedająca:
+Rowery24 sp. z o.o.
+01-234 Warszawa
+ul. Jasna 79]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="60" width="116" height="50" uuid="547bc1b3-28ee-4a8a-8e75-a620dca1ac2d"/>
+				<textFieldExpression><![CDATA["Pracownik wystawiający:\n" + $F{Imie pracownika} + " " + $F{Nazwisko pracownika}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="436" y="24" width="100" height="55" uuid="28f2ccb2-1795-4eb0-87d4-02905a287251"/>
+				<textFieldExpression><![CDATA["Odbiorca:\n" + $F{Imie klienta} + " " + $F{Nazwisko klienta} + "\n" + $F{Adres klienta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="166" y="40" width="122" height="20" forecolor="#FF0033" uuid="9805b9e9-a50e-46d2-b00d-71988d775023"/>
+				<textFieldExpression><![CDATA["Wartość faktury: " + $F{Cena calkowita} + " zł"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="21" y="-74" width="93" height="72" uuid="5a7b914d-c633-46f7-998a-d99c2ca204ac"/>
+				<imageExpression><![CDATA["G:\\BD\\projekt\\projekt\\raporty\\log.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="21" height="20" uuid="791025e0-6b0d-4b37-954d-d3c9740e4815"/>
+				<text><![CDATA[Lp.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="0" width="137" height="20" uuid="a86fe887-9ac3-4f0c-837e-83fba27c871f"/>
+				<text><![CDATA[Nazwa produktu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="0" width="60" height="20" uuid="5ccde571-7348-4784-ac5a-6443ffb475de"/>
+				<text><![CDATA[Cena za szt.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="0" width="54" height="20" uuid="cca654a4-c6dc-40c0-8284-ba7e9236e4bb"/>
+				<text><![CDATA[Ilość]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="0" width="100" height="20" uuid="7a5a1091-830a-472a-9b18-fbb31f389d7a"/>
+				<text><![CDATA[Cena]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="551" height="20" backcolor="#3366FF" uuid="cd81f23f-29a0-4cf4-a818-d8b7c3f0c5c7">
+					<printWhenExpression><![CDATA[$V{REPORT_COUNT}.intValue()%2 == 0]]></printWhenExpression>
+				</reportElement>
+				<textFieldExpression><![CDATA[" "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="137" height="20" uuid="75ad9f45-6f8c-4fe5-aee6-8a3a17982ed5"/>
+				<textFieldExpression><![CDATA[$F{Nazwa produktu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="21" height="20" uuid="e7f90298-b31d-47a5-a63b-b35ee753a06a"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}.intValue()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="206" y="0" width="60" height="20" uuid="9d55bb08-b8ca-43af-9269-c28f75cdffbc"/>
+				<textFieldExpression><![CDATA[$F{Cena pozycji} + " zł"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="341" y="0" width="54" height="20" uuid="b86d399f-9f5b-45f5-bd0c-5096839477dd"/>
+				<textFieldExpression><![CDATA[$F{Ilosc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="451" y="0" width="100" height="20" uuid="1f2dbcdb-96b2-46b5-9ad9-308704c4cf7d"/>
+				<textFieldExpression><![CDATA[($F{Cena pozycji}*$F{Ilosc}) + " zł"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

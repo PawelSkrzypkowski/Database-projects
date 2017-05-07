@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Analiza klientów" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="23c199ce-f0a1-49a1-854b-146a1c01d139">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from analiza_klientow where rownum <= 100]]>
+	</queryString>
+	<field name="Imie" class="java.lang.String"/>
+	<field name="Nazwisko" class="java.lang.String"/>
+	<field name=" Ilosc rachunkow" class="java.math.BigDecimal"/>
+	<field name="Suma rachunków" class="java.math.BigDecimal"/>
+	<field name="Srednia kwota na rachunku" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="455" y="0" width="100" height="20" uuid="553c37ed-faac-4287-8d15-f0c64dd0c151"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="309" height="79" forecolor="#006600" uuid="f862bdf7-b321-4c17-ba09-d617d3073236"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Przegląd klientów zapewniających największe zyski]]></text>
+			</staticText>
+			<image>
+				<reportElement x="319" y="0" width="93" height="72" uuid="7183eb76-8d2e-453e-827e-065ab3775c80"/>
+				<imageExpression><![CDATA["G:\\BD\\projekt\\projekt\\raporty\\log.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="29" width="39" height="20" isRemoveLineWhenBlank="true" uuid="08a6278d-5d95-49fc-b405-759df088bc79"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Imię]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="29" width="128" height="20" uuid="1d8cf143-c394-41c2-8391-ac12cd345222"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ilość rachunków]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="29" width="100" height="20" uuid="afb74ffe-5de0-49dc-985b-c2628fcaadc3"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sprzedaż]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="29" width="61" height="20" forecolor="#339900" uuid="e9ce6c26-08da-40d0-8467-8b1a86dd50f1"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Zysk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="29" width="100" height="20" uuid="3f20f397-4aff-4525-8822-f063d3ad1b08"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nazwisko]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="20" backcolor="#3366FF" uuid="2e63b8c5-a182-4b04-a5e5-a3a8551728e2">
+					<printWhenExpression><![CDATA[$V{REPORT_COUNT}.intValue()%2 == 0]]></printWhenExpression>
+				</reportElement>
+				<textFieldExpression><![CDATA[" "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="b4d2d797-9338-41c9-a370-e5abc59043bb"/>
+				<textFieldExpression><![CDATA[$F{Imie}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="d44734bf-8bd5-486a-8e11-c100f5da51a5"/>
+				<textFieldExpression><![CDATA[$F{Nazwisko}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="0" width="100" height="20" uuid="d95fe318-966d-429a-a1da-45a4e69c8ef7"/>
+				<textFieldExpression><![CDATA[$F{ Ilosc rachunkow}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="0" width="100" height="20" uuid="7df744f6-9ed1-4c54-ac96-040ec2ed16c6"/>
+				<textFieldExpression><![CDATA[$F{Suma rachunków}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="33891805-d8ad-495d-9774-97ca6026c92c"/>
+				<textFieldExpression><![CDATA[$F{Srednia kwota na rachunku}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="435" y="34" width="80" height="20" uuid="9155379e-ec71-415d-9fca-5c2b5b1187bd"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Strona "+$V{PAGE_NUMBER}+" z"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="34" width="40" height="20" uuid="e35c9df1-1b39-4ded-a026-2a2120012c66"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

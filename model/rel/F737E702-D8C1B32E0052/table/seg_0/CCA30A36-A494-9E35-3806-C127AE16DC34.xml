@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CCA30A36-A494-9E35-3806-C127AE16DC34" name="Rachunki">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>DDBB7B9F-9F51-DD2D-68B2-1541370D457D</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDRachunku" id="BE1148DE-0A30-6000-006C-1E62F4266FD4">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>2EA94637-0759-7DF9-B0D1-0FC8DDEFC118</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DataZakupu" id="DF4F4781-5BDE-F3C4-146A-F21E22EC0129">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>526A191E-AFFC-EBD4-4506-EB4913DC9D3A</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IDKlienta" id="56A8A956-A494-8A62-1DF8-615F36F870C4">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>114DEC5B-3095-37DB-AD47-3983D8B5CC7E</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="84E670BF-3499-F670-D23B-5928BECE2D10" referredColumn="401FD0A4-3B38-6501-CC65-DFFAFF363E98"/>
+</associations>
+</Column>
+<Column name="IDPracownika" id="3266BB46-5785-0D83-3476-AD95CA7DB31C">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>FE59B168-A705-6A50-2340-0EE44FCC8A73</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5A81234F-AFD5-8E0B-EF42-7AB09761D203" referredColumn="4A660EDD-9B3D-2358-F86E-CAE22E16D521"/>
+</associations>
+</Column>
+<Column name="CzyTransport" id="A886EB60-637E-B449-775E-72BEC33A125E">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>19DAA91C-29E6-6259-EFA9-337866C70A91</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CenaCalkowita" id="DD033976-9E25-F8FC-481B-31A59C45F7EE">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-29 22:26:32 UTC</createdTime>
+<generatorID>BC8A97C3-A802-DF27-6E6C-28CD6E8292CA</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BB06A365-3F02-AF15-2F20-CE3E46DBA291" name="Rachunki_PK">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>1A2C5C7A-8208-6422-CE08-6E2AAA80A8BA</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BE1148DE-0A30-6000-006C-1E62F4266FD4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FEA6320F-CBF1-09A2-AB44-8E1D3661B077" name="Rachunki_Klienci_FK">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>ECF4648F-F11E-AF45-EF4C-2E92D242B8D9</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="56A8A956-A494-8A62-1DF8-615F36F870C4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1111654B-AB10-A44F-C160-773BCDE6CD6D" name="Rachunki_Pracownicy_FK">
+<createdBy>Paweł</createdBy>
+<createdTime>2017-01-07 17:50:21 UTC</createdTime>
+<generatorID>5FC6CF82-2632-E30D-9A17-593B8BDA875F</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3266BB46-5785-0D83-3476-AD95CA7DB31C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
